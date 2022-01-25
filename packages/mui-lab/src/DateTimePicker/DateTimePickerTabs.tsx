@@ -13,8 +13,7 @@ import { DateTimePickerView } from './shared';
 type TabValue = 'date' | 'time';
 
 const viewToTab = (openView: DateTimePickerView): TabValue => {
-  // TODO: what happens if `openView` is `month`?
-  if (openView === 'day' || openView === 'year') {
+  if (['day', 'month', 'year'].contains(openView)) {
     return 'date';
   }
 
